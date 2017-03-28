@@ -12,7 +12,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>06C9C4A9-38CE-441A-8D06-E2F2D8B39B60</string>
+				<string>C0360FB5-9FDF-457B-9C70-978571FDB81E</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -21,6 +21,8 @@
 				<false/>
 			</dict>
 		</array>
+		<key>C0360FB5-9FDF-457B-9C70-978571FDB81E</key>
+		<array/>
 	</dict>
 	<key>createdby</key>
 	<string>Dave Wikoff</string>
@@ -42,7 +44,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>terminus</string>
+				<string>terminus open</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -54,7 +56,7 @@
 				<key>runningsubtext</key>
 				<string>PLEASE WAIT</string>
 				<key>script</key>
-				<string>exec $SHELL terminusalfred.sh $@</string>
+				<string>exec ${SHELL:-/bin/bash} terminusalfred.sh open $@</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -78,47 +80,40 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>query="$1"
-
-sites="$(terminus site:list --format=json)"
-echo $sites</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
+				<key>browser</key>
 				<string></string>
-				<key>type</key>
-				<integer>0</integer>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>https://dashboard.pantheon.io/sites/{query}</string>
+				<key>utf8</key>
+				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.script</string>
+			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
-			<string>06C9C4A9-38CE-441A-8D06-E2F2D8B39B60</string>
+			<string>C0360FB5-9FDF-457B-9C70-978571FDB81E</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
 	<key>uidata</key>
 	<dict>
-		<key>06C9C4A9-38CE-441A-8D06-E2F2D8B39B60</key>
-		<dict>
-			<key>xpos</key>
-			<integer>270</integer>
-			<key>ypos</key>
-			<integer>50</integer>
-		</dict>
 		<key>7DD3BDE5-A157-42E5-9376-F681FB50A4EE</key>
 		<dict>
 			<key>xpos</key>
-			<integer>50</integer>
+			<integer>80</integer>
 			<key>ypos</key>
-			<integer>50</integer>
+			<integer>30</integer>
+		</dict>
+		<key>C0360FB5-9FDF-457B-9C70-978571FDB81E</key>
+		<dict>
+			<key>xpos</key>
+			<integer>540</integer>
+			<key>ypos</key>
+			<integer>30</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>

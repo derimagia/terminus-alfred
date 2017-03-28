@@ -9,5 +9,9 @@ cd `dirname $0`
 COMPOSER_HOME=${COMPOSER_HOME:-$HOME/.composer}
 PATH=$COMPOSER_HOME/vendor/bin:$PATH
 
-json=$(terminus site:list --format=json)
-php terminusalfred.php "$json"
+if [[ $1 == "open" ]]; then
+	shift
+	json=$(terminus site:list --format=json)
+	php terminusalfred.php "$json"
+fi
+
