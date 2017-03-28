@@ -1,0 +1,21 @@
+{
+    "name": "derimagia/terminus-alfred",
+    "license": "MIT",
+    "description": "Pantheon Workflow for Alfred",
+    "type": "project",
+    "require": {
+        "joetannenbaum/alfred-workflow": "^0.1.0",
+        "pantheon-systems/terminus": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "TerminusAlfred\\": "src"
+        }
+    },
+    "authors": [
+        {
+            "name": "Dave Wikoff",
+            "email": "dgsims@gmail.com"
+        }
+    ]
+}
