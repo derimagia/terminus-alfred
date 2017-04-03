@@ -21,6 +21,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>86671DFB-C60D-4098-BB73-C830D2BB014B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>0AC527AA-AF8C-42A5-8CED-D8E3C8823DC7</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>C0360FB5-9FDF-457B-9C70-978571FDB81E</key>
 		<array/>
 	</dict>
@@ -34,6 +47,25 @@
 	<string>Terminus</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>https://dashboard.pantheon.io/sites/{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>C0360FB5-9FDF-457B-9C70-978571FDB81E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -54,7 +86,7 @@
 				<key>queuemode</key>
 				<integer>1</integer>
 				<key>runningsubtext</key>
-				<string>PLEASE WAIT</string>
+				<string>Fetching SItes</string>
 				<key>script</key>
 				<string>exec ${SHELL:-/bin/bash} terminusalfred.sh open $@</string>
 				<key>scriptargtype</key>
@@ -62,9 +94,9 @@
 				<key>scriptfile</key>
 				<string>run.sh</string>
 				<key>subtext</key>
-				<string>...</string>
+				<string>Enter Site</string>
 				<key>title</key>
-				<string>Terminus</string>
+				<string>Open Terminus Site</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -80,19 +112,42 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>https://dashboard.pantheon.io/sites/{query}</string>
-				<key>utf8</key>
-				<true/>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>Cache for Terminus Alfred has been cleared.</string>
+				<key>title</key>
+				<string>Cleared Terminus Alfred Cache</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
+			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
-			<string>C0360FB5-9FDF-457B-9C70-978571FDB81E</string>
+			<string>0AC527AA-AF8C-42A5-8CED-D8E3C8823DC7</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>terminus cc</string>
+				<key>subtext</key>
+				<string>Clear Cache for Terminus Alfred</string>
+				<key>text</key>
+				<string>Clear Temrinus Alfred Cache</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>86671DFB-C60D-4098-BB73-C830D2BB014B</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -101,12 +156,26 @@
 	<string></string>
 	<key>uidata</key>
 	<dict>
+		<key>0AC527AA-AF8C-42A5-8CED-D8E3C8823DC7</key>
+		<dict>
+			<key>xpos</key>
+			<integer>310</integer>
+			<key>ypos</key>
+			<integer>200</integer>
+		</dict>
 		<key>7DD3BDE5-A157-42E5-9376-F681FB50A4EE</key>
 		<dict>
 			<key>xpos</key>
 			<integer>80</integer>
 			<key>ypos</key>
 			<integer>30</integer>
+		</dict>
+		<key>86671DFB-C60D-4098-BB73-C830D2BB014B</key>
+		<dict>
+			<key>xpos</key>
+			<integer>80</integer>
+			<key>ypos</key>
+			<integer>210</integer>
 		</dict>
 		<key>C0360FB5-9FDF-457B-9C70-978571FDB81E</key>
 		<dict>
